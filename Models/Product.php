@@ -10,7 +10,7 @@ class Product
   private $image;
 
   // getters
-  public function __construct($_id, $_name, Category $_category, int $_price, $_image)
+  public function __construct($_id, $_name, Category $_category, $_price, $_image)
   {
     $this->set_id($_id);
     $this->set_name($_name);
@@ -35,7 +35,16 @@ class Product
   }
   public function get_price()
   {
-    return $this->price;
+    if (!is_int($this->price)) {
+      try {
+        throw new Exception('Is not a number');
+      } catch (Exception $e) {
+        return 'Prodotto non disponibile';
+      }
+
+    }
+
+    return $this->price . '€';
   }
   public function get_image()
   {

@@ -13,7 +13,7 @@ $product = new Product(100, 'Prova Prodotto', $dog, 10, '');
 
 // Food Animals 
 
-$food_cani = new Food(10, 'croccantini', $dog, 10, 'https://rep.grupposme.net/RepAP?code=D1446868&skey=968356899d00369a281ad152d81484e5&resize=200');
+$food_cani = new Food(10, 'croccantini', $dog, 'lol', 'https://rep.grupposme.net/RepAP?code=D1446868&skey=968356899d00369a281ad152d81484e5&resize=200');
 $food_cani->set_ingredients('carne');
 
 $food_gatti = new Food(40, 'croccantini', $cat, 15, 'https://arcaplanet.vtexassets.com/arquivos/ids/286717/12538616_1.jpg?v=638215445264130000');
@@ -72,7 +72,7 @@ $products = [$food_cani, $food_gatti, $game_cani, $game_gatti];
               </p>
               <p class="card-text">
                 Prezzo:
-                <?php echo $product->get_price() ?> €.
+                <?php echo $product->get_price() ?>
               </p>
 
             </div>
